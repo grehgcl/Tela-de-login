@@ -8,9 +8,17 @@
 body{
   margin: 0;
   padding: 0;
-  background: white;
+  background: rgba(252, 251, 251, 0.774);
   height: 100vh;
   overflow: hidden;
+}
+
+.tela-login{
+  border-radius: 980px;
+  left: 100px;
+  position: relative;
+  width: 200px;
+  filter: opacity(0.4) drop-shadow(0 0 0 rgb(102, 1, 133)); 
 }
 .center{
   position: absolute;
@@ -31,21 +39,22 @@ body{
   padding: 0 40px;
   box-sizing: border-box;
 }
-form .txt_field{
+form .texto__usuario{
   position: relative;
   border-bottom: 2px solid #adadad;
   margin: 30px 0;
 }
-.txt_field input{
+.texto__usuario input{
   width: 100%;
   padding: 0 5px;
   height: 40px;
   font-size: 16px;
-  border: none;
   background: none;
+  border-radius: 8px;
   outline: none;
+  color: #ad0db3;
 }
-.txt_field label{
+.texto__usuario label{
   position: absolute;
   top: 50%;
   left: 5px;
@@ -55,7 +64,7 @@ form .txt_field{
   pointer-events: none;
   transition: .5s;
 }
-.txt_field span::before{
+.texto__usuario span::before{
   content: '';
   position: absolute;
   top: 40px;
@@ -65,13 +74,13 @@ form .txt_field{
   background: #ad0db3;
   transition: .5s;
 }
-.txt_field input:focus ~ label,
-.txt_field input:valid ~ label{
+.texto__usuario input:focus ~ label,
+.texto__usuario input:valid ~ label{
   top: -5px;
   color: #bb26d9;
 }
-.txt_field input:focus ~ span::before,
-.txt_field input:valid ~ span::before{
+.texto__usuario input:focus ~ span::before,
+.texto__usuario input:valid ~ span::before{
   width: 100%;
 }
 .pass{
@@ -132,3 +141,22 @@ input[type="submit"]:hover{
       margin-bottom: 2rem;
   }
 }
+
+@media screen and (min-width:768px) {
+  .center{
+      max-width: 600px;
+  }
+
+}
+
+@media screen and (min-width: 1024px){
+  .center{
+
+
+      padding-top: 8.25rem;
+  }
+
+  .body {
+      font-size: 3.25rem;
+      margin-bottom: 2rem;
+  }
